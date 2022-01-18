@@ -10,7 +10,7 @@
     "start": "webpack serve --disable-host-check --host 0.0.0.0",
     "clean": "rm dist/*.js dist/*.wikitext",
     "lint:js": "eslint --cache --cache-location .eslintcache --ignore-path .eslintignore .",
-    "lint:css": "stylelint --syntax scss '**/*.pcss'"
+    "lint:css": "stylelint '**/*.pcss'"
   },
   "keywords": [],
   "license": "MIT",
@@ -40,6 +40,7 @@
     "postcss-nested": "^5.0.6",
     "style-loader": "^2.0.0",
     "stylelint": "^14.2.0",
+    "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-config-wikimedia": "^0.11.1",
     "toml": "^3.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
