@@ -27,7 +27,7 @@
     "babel-loader": "^8.2.3",
     "core-js": "^3.20.3",
     "css-loader": "^5.2.7",
-    "eslint": "^7.32.0",
+    "eslint": "^8.7.0",
     "eslint-config-wikimedia": "^0.21.0",
     "handlebars": "^4.7.7",
     "handlebars-loader": "^1.7.1",
