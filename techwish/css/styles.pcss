@@ -22,23 +22,6 @@
 			color: var( --banner-color-text );
 			text-decoration: none;
 		}
-
-		max-height: 200px;
-
-		/* $breakpoint-tablet 834px banner size */
-		@media ( min-width: 834px ) {
-			max-height: 144px;
-		}
-
-		/* $breakpoint-desktop 1125px banner size */
-		@media ( min-width: 1350px ) {
-			max-height: 172px;
-		}
-
-		/* $breakpoint-desktop-large 1920px banner size */
-		@media ( min-width: 2145px ) {
-			max-height: 192px;
-		}
 	}
 	&-logo-wrapper {
 		align-items: center;
@@ -56,16 +39,6 @@
 			display: flex;
 			min-width: 190px;
 		}
-
-		/* $breakpoint-desktop 1125px banner size */
-		@media ( min-width: 1350px ) {
-			min-width: 298px;
-		}
-
-		/* $breakpoint-desktop-large 1920px banner size */
-		@media ( min-width: 2145px ) {
-			min-width: 554px;
-		}
 	}
 	&-text {
 		&-headline {
@@ -74,32 +47,12 @@
 			font-weight: bold;
 			font-size: 16px;
 			font-family: 'Charter Bold BT', 'Times New Roman', serif;
-
-			/* $breakpoint-desktop 1125px banner size */
-			@media ( min-width: 1350px ) {
-				font-size: 23.04px;
-			}
-
-			/* $breakpoint-desktop-large 1920px banner size */
-			@media ( min-width: 2145px ) {
-				font-size: 27.65px;
-			}
 		}
 		&-content {
 			width: 100%;
 			font-size: 13.33px;
 			font-family: 'System sans-serif Regular', 'Open sans regular', sans-serif;
 			line-height: 21px;
-
-			/* $breakpoint-desktop 1125px banner size */
-			@media ( min-width: 1350px ) {
-				font-size: 16px;
-			}
-
-			/* $breakpoint-desktop-large 1920px banner size */
-			@media ( min-width: 2145px ) {
-				font-size: 19.2px;
-			}
 		}
 		&-wrapper {
 			display: flex;
@@ -161,13 +114,6 @@
 			align-self: flex-start;
 			padding: 6px;
 		}
-
-		/* $breakpoint-desktop 1125px banner size */
-		@media ( min-width: 1350px ) {
-			margin-top: 16px;
-			font-size: 16px;
-			width: 180px;
-		}
 	}
 }
 
@@ -194,7 +140,77 @@
 	}
 }
 
+/**
+ * Font size and layout responsiveness for skins that don't limit content width like modern Vector
+ */
+.skin-minerva,
+.skin-monobook,
+.skin-timeless,
+.skin-vector-legacy {
+
+	.banner-button {
+		/* $breakpoint-desktop 1125px banner size */
+		@media ( min-width: 1350px ) {
+			margin-top: 16px;
+			font-size: 16px;
+			width: 180px;
+		}
+	}
+
+	.banner-logo-wrapper {
+		/* $breakpoint-desktop 1125px banner size */
+		@media ( min-width: 1350px ) {
+			min-width: 298px;
+		}
+
+		/* $breakpoint-desktop-large 1920px banner size */
+		@media ( min-width: 2145px ) {
+			min-width: 554px;
+		}
+	}
+
+	.banner-text-content {
+		/* $breakpoint-desktop 1125px banner size */
+		@media ( min-width: 1350px ) {
+			font-size: 16px;
+		}
+
+		/* $breakpoint-desktop-large 1920px banner size */
+		@media ( min-width: 2145px ) {
+			font-size: 19.2px;
+		}
+	}
+
+	.banner-text-headline {
+		/* $breakpoint-desktop 1125px banner size */
+		@media ( min-width: 1350px ) {
+			font-size: 21.28px;
+		}
+
+		/* $breakpoint-desktop-large 1920px banner size */
+		@media ( min-width: 2145px ) {
+			font-size: 27.65px;
+		}
+	}
+}
+
+.skin-minerva {
+	.banner-container {
+		position: relative;
+	}
+
+	.banner-close {
+		top: 0.2em;
+	}
+}
+
 .skin-monobook {
+	.banner-wrapper {
+		/* $breakpoint-desktop 1125px banner size */
+		@media ( min-width: 1350px ) {
+			max-height: 150px;
+		}
+	}
 
 	.banner-text {
 		&-headline {
@@ -211,7 +227,14 @@
 	}
 }
 
-.skin-timeless .banner-close {
-	right: 2em;
-	top: 1.75em;
+.skin-monobook,
+.skin-timeless {
+	.community-banner {
+		position: relative;
+	}
+
+	.banner-close {
+		right: 0;
+		top: 0.2em;
+	}
 }

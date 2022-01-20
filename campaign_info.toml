@@ -88,15 +88,15 @@ tracking = "WMDE_oceditors_fall_2021_ctrl"
 
 # Techwish Campaign
 [techwish]
-campaign_tracking = "WMDE_techwish_voting_2020"
+campaign_tracking = "WMDE_techwish_survey_2022"
 preview_link = "/wiki/Wikipedia:Hauptseite?useskin=vector&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
 wrapper_template = "wikipedia_org"
 
 [techwish.banners.main]
 filename = "./techwish/main.js"
-pagename = "B20WMDE_techwish_voting_01_200706_main"
+pagename = "B22WMDE_techwish_survey_2022"
 #tracking string gets extended with a suffix in the code
-tracking = "WMDE_techwish_voting_2020_main"
+tracking = "WMDE_techwish_survey_2022"
 
 
 # Authors Campaign
