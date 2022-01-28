@@ -16,7 +16,7 @@
   "license": "MIT",
   "repository": "https://github.com/wmde/community-banners",
   "dependencies": {
-    "babel-eslint": "^10.1.0"
+    "@babel/eslint-parser": "^7.16.5"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",

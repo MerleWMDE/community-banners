@@ -19,7 +19,7 @@ module.exports = merge( CommonConfig, {
 		minimizer: [ new UglifyJsPlugin( {
 			uglifyOptions: {
 				mangle: {
-					ie8: false,
+					ie: false,
 					keep_fnames: true,
 					reserved: [ '$', 'exports', 'require' ]
 				},
