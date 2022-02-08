@@ -1,8 +1,11 @@
 export class EventLoggingTracker {
 
-	constructor( bannerName, impressionCounter ) {
+	constructor( bannerName, impressionCounter, userIdFunction ) {
 		this.bannerName = bannerName;
 		this.impressionCounter = impressionCounter;
+		this.getUserId = userIdFunction || function () {
+			return mw.user.getId();
+		};
 	}
 
 	/**
@@ -37,7 +40,7 @@ export class EventLoggingTracker {
 					bannerName: this.bannerName,
 					bannerAction: actionName,
 					bannerImpressions: this.impressionCounter.getImpressionCount(),
-					userID: mw.user.getId()
+					userID: this.getUserId()
 				} );
 			}
 		};
@@ -49,7 +52,7 @@ export class EventLoggingTracker {
 				bannerName: this.bannerName,
 				bannerAction: 'banner-seen',
 				bannerImpressions: this.impressionCounter.getImpressionCount(),
-				userID: mw.user.getId()
+				userID: this.getUserId()
 			} );
 		}
 	}

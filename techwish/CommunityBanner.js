@@ -4,11 +4,19 @@ import { LocalImpressionCount } from '../shared/LocalImpressionCount';
 const BANNER_SEEN_TRACK_RATIO = 1;
 const BANNER_CLOSE_TRACK_RATIO = 1;
 
+function NoUserId() {
+	return 0;
+}
+
 export class CommunityBanner {
 
 	constructor( bannerName, bannerTemplate, templateVars ) {
 		this.localImpressionCount = new LocalImpressionCount( bannerName );
-		this.eventLoggingTracker = new EventLoggingTracker( bannerName, this.localImpressionCount );
+		this.eventLoggingTracker = new EventLoggingTracker(
+			bannerName,
+			this.localImpressionCount,
+			NoUserId
+		);
 		this.bannerTemplate = bannerTemplate;
 		this.templateVars = templateVars;
 	}
